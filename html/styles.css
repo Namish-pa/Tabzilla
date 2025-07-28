@@ -1,0 +1,161 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* General Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #DE95DF;
+  color: #1c1e21;
+  width: 420px;
+  height: 400px;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Needed for positioning the back button */
+  width: 100%;
+}
+
+/* A utility class to hide views that aren't active */
+.hidden {
+  display: none !important;
+}
+
+/* Shared title style for all views */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* ======================= */
+/* MAIN MENU STYLES        */
+/* ======================= */
+.menu {
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-button {
+  font-family: Poppins, sans-serif;
+  color:#290404
+  width:50rem;
+  padding: 16px;
+  border: 1px solid #ccd0d5;
+  border-radius: 60px;
+  background-color: #D9D9D9;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.menu-button:hover {
+  background-color: #f5f6f7;
+}
+
+.menu-button:active {
+  transform: scale(0.99);
+}
+
+/* ======================= */
+/* VIEW-SPECIFIC STYLES    */
+/* ======================= */
+
+.view {
+  width: 100%;
+}
+
+.back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #606770;
+  padding: 0;
+}
+
+/* Timer Display Styling */
+#timer-display {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Styles for Start/Reset buttons */
+button#start-btn, button#reset-btn {
+  flex-grow: 1;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#start-btn {
+  background-color: #1877f2;
+  color: white;
+}
+#start-btn:hover { background-color: #166fe5; }
+
+#reset-btn {
+  background-color: #e4e6eb;
+  color: #1c1e21;
+}
+#reset-btn:hover { background-color: #dcdfe4; }
+
+
+/* Text area for notes */
+#note-area {
+  width: 100%;
+  height: 180px;
+  padding: 12px;
+  border: 1px solid #ccd0d5;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+#note-area:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
