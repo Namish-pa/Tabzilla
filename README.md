@@ -1,6 +1,6 @@
 # Chrome Extension: Tabzilla
 
-> 🚧 A work-in-progress Chrome extension that [briefly describes what it does, e.g., "removes distracting content from YouTube feeds"].
+> 🚧 A work-in-progress Chrome extension that detoxifies your browser when you want to lock in.
 
 ![WIP Badge](https://img.shields.io/badge/status-WIP-yellow)
 
@@ -44,8 +44,10 @@ Tabzilla/
 To install and test this Chrome extension locally:
 
 0. Clone the repo using git clone
-1. Open Google Chrome and go to `chrome://extensions/` (make sure you can run legacy extensions)
-2. In the top right, enable **Developer mode**
-3. Click the **Load unpacked** button
-4. Select the folder containing the extension's files (where `manifest.json` is located)
-5. The extension should now appear in your toolbar
+1. Open Google Chrome and go to `chrome://flags/`
+2. Search for `allow legacy manifest versions` and enable it
+3. Go to `chrome://extensions/`
+4. In the top right, enable **Developer mode**
+5. Click the **Load unpacked** button
+6. Select the folder containing the extension's files (where `manifest.json` is located)
+7. The extension should now appear in your toolbar
