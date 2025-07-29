@@ -14,7 +14,7 @@
     <!-- ======================= -->
     <!--      MAIN MENU VIEW     -->
     <!-- ======================= -->
-    <div id="main-view" class="hidden">
+    <div id="main-view" class="view">
       <h1 class="title">TabZilla</h1>
       <div class="menu">
         <button id="show-timer-btn" class="menu-button">
@@ -27,12 +27,15 @@
           <span>Block Sites</span>
         </button>
       </div>
+      <div class="footer">
+        <p>Swimming Goggles</p>
+      </div>
     </div>
 
     <!-- ======================= -->
     <!--       TIMER VIEW        -->
     <!-- ======================= -->
-    <div id="timer-view" class="view ">
+    <div id="timer-view" class="view hidden">
       <button class="back-btn">&larr;</button>
       
       <div class="presets">
@@ -56,7 +59,7 @@
     <!--        NOTES VIEW       -->
     <!-- ======================= -->
     <div id="notes-view" class="view hidden">
-      <button class="back-btn">&larr; Back</button>
+      <button class="back-btn">&larr; </button>
       <h1 class="title">Post-it Note</h1>
       <textarea id="note-area" placeholder="Write a quick note..."></textarea>
     </div>
@@ -65,7 +68,7 @@
     <!--     SITE BLOCKER VIEW   -->
     <!-- ======================= -->
     <div id="blocker-view" class="view hidden">
-        <button class="back-btn">&larr; Back</button>
+        <button class="back-btn">&larr;</button>
         <h1 class="title">Site Blocker</h1>
         <!-- We will add the UI for this feature later -->
         <p style="text-align: center;">Site blocker settings will go here.</p>
