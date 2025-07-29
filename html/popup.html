@@ -3,11 +3,18 @@
 <head>
   <title>Focus Hub</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- This line imports the Poppins font used in your CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="container">
-    <div id="main-view" class="view">
+    <!-- ======================= -->
+    <!--      MAIN MENU VIEW     -->
+    <!-- ======================= -->
+    <div id="main-view" class="hidden">
       <h1 class="title">TabZilla</h1>
       <div class="menu">
         <button id="show-timer-btn" class="menu-button">
@@ -16,8 +23,56 @@
         <button id="show-notes-btn" class="menu-button">
           <span>Post-it Note</span>
         </button>
-         <button id="show-notes-btn" class="menu-button">
+        <button id="show-blocker-btn" class="menu-button">
           <span>Block Sites</span>
         </button>
       </div>
     </div>
+
+    <!-- ======================= -->
+    <!--       TIMER VIEW        -->
+    <!-- ======================= -->
+    <div id="timer-view" class="view ">
+      <button class="back-btn">&larr;</button>
+      
+      <div class="presets">
+        <button class="preset-btn active" data-time="30">30 mins</button>
+        <button class="preset-btn" data-time="60">1 Hour</button>
+        <button class="preset-btn" data-time="custom">Custom</button>
+      </div>
+
+      <div class="timer-box">
+        <div id="timer-display">30:00</div>
+        <button id="start-timer-btn">Start Timer</button>
+      </div>
+      
+      <div id="custom-input-container" class="hidden">
+        <input type="number" id="custom-minutes" placeholder="Enter minutes">
+        <button id="set-custom-btn">Set</button>
+      </div>
+    </div>
+
+    <!-- ======================= -->
+    <!--        NOTES VIEW       -->
+    <!-- ======================= -->
+    <div id="notes-view" class="view hidden">
+      <button class="back-btn">&larr; Back</button>
+      <h1 class="title">Post-it Note</h1>
+      <textarea id="note-area" placeholder="Write a quick note..."></textarea>
+    </div>
+    
+    <!-- ======================= -->
+    <!--     SITE BLOCKER VIEW   -->
+    <!-- ======================= -->
+    <div id="blocker-view" class="view hidden">
+        <button class="back-btn">&larr; Back</button>
+        <h1 class="title">Site Blocker</h1>
+        <!-- We will add the UI for this feature later -->
+        <p style="text-align: center;">Site blocker settings will go here.</p>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
