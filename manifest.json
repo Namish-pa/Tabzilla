@@ -1,38 +1,56 @@
 {
-    "manifest_version": 3,
-    "name": "TabZilla",
-    "description": "An extension",
-    "version": "1.0",
-    "permissions": [
-        "alarms",
-        "storage",
-        "notifications",
-        "declarativeNetRequest",
-        "declarativeNetRequestWithHostAccess"
-    ],
-    "host_permissions": [
-        "<all_urls>"
-    ],
-    "action": {
-        "default_popup": "html/popup.html",
-        "default_icon": {
-            "16": "images/1.jpg",
-            "48": "images/2.jpg",
-            "128": "images/3.jpg"
-        }
-    },
-    "background": {
-        "service_worker": "html/background.js"
-    },
-    "content_scripts": [
-        {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["html/content.js"]
-        }
-    ],
-    "icons": {
-        "16": "images/1.jpg",
-        "48": "images/2.jpg",
-        "128": "images/3.jpg"
+  "manifest_version": 3,
+  "name": "TabZilla",
+  "version": "1.0",
+  "description": "An extension",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "offscreen",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "images/1.jpg",
+      "48": "images/2.jpg",
+      "128": "images/3.jpg"
     }
+  },
+  "background": {
+    "service_worker": "html/background.js"
+  },
+  "offscreen": {
+    "reasons": ["AUDIO_PLAYBACK"],
+    "justification": "To play a sound when the timer finishes."
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sounds/yes.wav"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "html/content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "images/1.jpg",
+    "48": "images/2.jpg",
+    "128": "images/3.jpg"
+  }
 }
